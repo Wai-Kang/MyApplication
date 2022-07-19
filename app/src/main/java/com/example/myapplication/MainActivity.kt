@@ -1,15 +1,17 @@
 package com.example.myapplication
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var diceImg: ImageView
     lateinit var numberText: TextView
+    lateinit var editPlayerName: EditText
+    lateinit var playerNameTV: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +19,20 @@ class MainActivity : AppCompatActivity() {
         numberText = findViewById(R.id.numberText)
         //val rollButton: Button = findViewById(R.id.rollButton)
         val rollButton = findViewById<Button>(R.id.rollButton)
+        editPlayerName = findViewById(R.id.editPlayerName)
+        playerNameTV = findViewById(R.id.playerName)
         rollButton.setOnClickListener{rollDice()}
+        val updateButton = findViewById<Button>(R.id.updatePlayerNameBtn)
+        updateButton.setOnClickListener{updatePlayerName(it)}
+    }
+
+    private fun updatePlayerName(view: View){
+        playerNameTV.text = editPlayerName.text
+
+        //hide keyboard
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
+        editPlayerName.text.clear()
     }
 
     private fun rollDice(){

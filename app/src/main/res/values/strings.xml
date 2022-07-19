@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name = "helloText">Hello</string>
-    <string name = "textNumber">Hello</string>
-    <string name = "rollDice">Roll</string>
-    <string name = "rollDiceRules">To pass u must pass</string>
-    <string name="playerName">Enter Your Name</string>
+    <string name="helloText">Hello</string>
+    <string name="textNumber">Hello</string>
+    <string name="rollDice">Roll</string>
+    <string name="rollDiceRules">To pass u must pass</string>
+    <string name="playerName"></string>
+    <string name="rulesTxt">
+        \n\nPlace the status board in the middle of the table. Place the status marker on the one space.
+\n\nPlace all of the dice to the left of the status board in three piles based on the three different types of dice: ground floor, upper floor, penthouse.
+        \n\nThese piles are referred to as the construction yard.
+\n\nTake one dice of each type and place them to the right of the status board. This pile is known as the abandoned district.
+\n\nAll of the building tiles should be placed near the status board.
+\n\nThe player who has most recently been in a high-rise building will start the game.
+\n\nStarting with the first player and moving clockwise players will receive one die set to a specific ground floor to start the game.
+        \n\nThe first player will receive a high-rise/orange ground floor. The second player will receive a mid-rise/blue ground floor.
+        \n\nThe third player will get a low-rise/purple ground floor. The fourth player receives no die at the beginning of the game.</string>
+    <string name="editPlayerName">Type your name here</string>
+    <string name="updatePlayerNameTxt">update</string>
 </resources>
